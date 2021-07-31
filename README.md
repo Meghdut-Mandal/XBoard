@@ -37,7 +37,7 @@ The set of features are divided across versions, on thier complexity( PoC = proo
 
 ## Architecture 
 
-[Alt text](Architecture.png?raw=true "Architecture ")
+[Archietecture](Architecture.png)
 
 
 
