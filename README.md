@@ -37,7 +37,7 @@ The set of features are divided across versions, on thier complexity( PoC = proo
 
 ## Architecture 
 
-[Archietecture](https://github.com/Meghdut-Mandal/XBoard/raw/main/Architecture.png)
+![Architecture](https://user-images.githubusercontent.com/39855414/127747972-175420f6-53c7-44a3-8ccc-656d89641791.png)
 
 
 
