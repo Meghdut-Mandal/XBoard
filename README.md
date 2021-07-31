@@ -30,6 +30,14 @@ The set of features are divided across versions, on thier complexity( PoC = proo
 - [ ] PoC Desktop, Text only 
 - [ ] Cli improvements
 ### Beta 1
-- [ ] Desktop UI 
+- [ ] Desktop UI improvements
 - [ ] Android Notifications support.
 - [ ] Image and File Copy support.
+
+
+## Architecture 
+
+
+
+
+
