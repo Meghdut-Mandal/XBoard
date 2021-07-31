@@ -49,7 +49,7 @@ Currently the plan is to use Discord acts as a backend for routing the messages.
 1. **#updates** : This channel contains frequent updates or automated actions from all the clients. This can be used for features like devices online, or what’s in their clipboard.
 2. **#request** : This channel is used for for completing user actions, like copying into other devices clipboards or pulling data from them like taking screenshots. This is a 2 step process a client posts a request message(like send me a ss) with a target device id, the request is then served in return by the target device in form of a message.
 
-### Request Message
+### Message
 - **id** String: The origin device id  
 - **dest** Strings : The destination device id, can be a '#' for the action to execute on all device.  
 - **message.type** : The type of request like request.ss for taking screenshot, request.paste for pasting content on the device  
