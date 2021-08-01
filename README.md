@@ -53,7 +53,7 @@ A PoC must be done in the Alpha 1 phase trying out Google's ProtoBuff.
 
 ### Message
 - **id** String: The origin device id  
-- **dest** Strings : The destination device id, can be a '#' for the action to execute on all device.  
+- **dest** Strings : The destination device id, can be a -1 for the action to execute on all device.  
 - **message.type** : The type of request like request.ss for taking screenshot, request.paste for pasting content on the device  
 - **message.payload** : Any additional info required for the completion of the request or the body of the response.
 
@@ -95,11 +95,11 @@ Each of the payload is specific to each of the Message Types
 ```json 
 {
    "id" : 3234,
-   "dest" : #,
+   "dest" : -1,
    "message.type" : "update.join",
    "message.payload" : {
     "id" : 3234,
-    "device.type" : "Android 12"
+    "device.type" : "Android 12",
     "name" : "Galaxy Fold 2"
     "clipbaord.contents" : ["https://youtu.be/XZw3xVOlmww", "Bhoi Cinematic universe"] 
    }  
