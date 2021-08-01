@@ -100,7 +100,7 @@ Each of the payload is specific to each of the Message Types
    "message.payload" : {
     "id" : 3234,
     "device.type" : "Android 12",
-    "name" : "Galaxy Fold 2"
+    "name" : "Galaxy Fold 2",
     "clipbaord.contents" : ["https://youtu.be/XZw3xVOlmww", "Bhoi Cinematic universe"] 
    }  
 }
