@@ -46,7 +46,7 @@ Each device has a unique id, all valid message exchanges must have this id.
 Currently the plan is to use Discord acts as a backend for routing the messages. With 2 channels :- 
 
 1. **#updates** : This channel contains frequent updates or automated actions from all the clients. This can be used for features like devices online, what’s in their clipboard, or when a new client joins up.
-2. **#request** : This channel is used for for completing user actions, like copying into other devices clipboards or pulling data from them like taking screenshots. This is a 2 step process a client posts a request message(like send me a ss) with a target device id, the request is then served in return by the target device in form of a message.
+2. **#request** : This channel is used for for completing user actions, like copying into other devices clipboards or pulling data from them like taking screenshots. This is a 2 step process a client posts a request message(like send me a ss) with a target device id, the target device after completing the action return a response message.
 
 Although json might seems to be a easy solution, but handling files and images would be a difficult task.( although base64 encoding can be used but discord's text message length is limited by 2k characters. With protobuff we can generate platform agnostic classes that can be use to transmit any kind of data including binary.
 A PoC must be done in the Alpha 1 phase trying out Google's ProtoBuff. 
@@ -105,7 +105,7 @@ Each of the payload is specific to each of the Message Types
    }  
 }
 ```
-- 
+
 
 
 
