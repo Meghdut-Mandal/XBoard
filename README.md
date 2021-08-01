@@ -67,6 +67,14 @@ Currently the plan is to use Discord acts as a backend for routing the messages.
 - update.join -> The first message which is sent by the client after joining the system.
 - update.client -> A message to show the contents of the current client in case of an update,for example when a update.join message is received, all the other active clients will post an update.client, or when the clipboard contents change in a client.
 
+#### Message Payloads 
+Each of the payload is specific to each of the Message Types 
+- request.paste.text -> 
+```json 
+{
+   "text" : "My name is Raj, naam toh suna hi hoga!" 
+}
+```
 
 
 
