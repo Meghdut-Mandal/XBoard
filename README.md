@@ -16,8 +16,6 @@ Kundra, one of his friend agreed to help him with the code. Using this tool Kund
 - [ ] Debian 
 - [ ] Cli
 - [ ] Android 
-- [ ] IPhone 
-
 
 ## Features
 The set of features are divided across versions, on thier complexity( PoC = proof of concept, ie. the bare minimum to show its working ).
@@ -26,6 +24,7 @@ The set of features are divided across versions, on thier complexity( PoC = proo
 - [ ] Text support 
 - [ ] PoC Android 
 - [ ] PoC Server Cli 
+- [ ] PoC protobuff support if possible 
 ### Alpha 2 
 - [ ] Android UI improvements
 - [ ] PoC Desktop, Text only 
@@ -51,6 +50,8 @@ Currently the plan is to use Discord acts as a backend for routing the messages.
 1. **#updates** : This channel contains frequent updates or automated actions from all the clients. This can be used for features like devices online, what’s in their clipboard, or when a new client joins up.
 2. **#request** : This channel is used for for completing user actions, like copying into other devices clipboards or pulling data from them like taking screenshots. This is a 2 step process a client posts a request message(like send me a ss) with a target device id, the request is then served in return by the target device in form of a message.
 
+Although json might seems to be a easy solution. 
+
 ### Message
 - **id** String: The origin device id  
 - **dest** Strings : The destination device id, can be a '#' for the action to execute on all device.  
@@ -72,10 +73,25 @@ Each of the payload is specific to each of the Message Types
 - request.paste.text -> 
 ```json 
 {
-   "text" : "My name is Raj, naam toh suna hi hoga!" 
+   "id" : 1223,
+   "dest" : 3234,
+   "message.type" : "request.paste.text",
+   "message.payload" : {
+    "text" : "My name is Raj, naam toh suna hi hoga!" 
+   }
 }
 ```
-
+- response.paste.text -> 
+```json 
+{
+   "id" : 3234,
+   "dest" : 1223,
+   "message.type" : "response.paste.text",
+   "message.payload" : {
+    "status" : "Successful"  
+   }  
+}
+```
 
 
 
